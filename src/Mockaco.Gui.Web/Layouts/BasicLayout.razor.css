@@ -1,0 +1,14 @@
+.site-layout-content {
+    background: #fff;
+    padding: 24px;
+    min-height: 280px;
+}
+#logo {
+    height: 64px;
+    overflow: hidden;
+    float: left;
+}
+
+#logo img {
+    height: 32px;
+}

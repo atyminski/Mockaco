@@ -14,6 +14,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mockaco.Tests", "test\Mocka
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mockaco.AspNetCore", "src\Mockaco.AspNetCore\Mockaco.AspNetCore.csproj", "{7766C592-9887-4162-8B9C-51003ED30335}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mockaco.Gui.Web", "src\Mockaco.Gui.Web\Mockaco.Gui.Web.csproj", "{0B695353-EDE8-4697-A4F0-4E0B4BA7384F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,11 +39,19 @@ Global
 		{7766C592-9887-4162-8B9C-51003ED30335}.Nuget|Any CPU.Build.0 = Debug|Any CPU
 		{7766C592-9887-4162-8B9C-51003ED30335}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7766C592-9887-4162-8B9C-51003ED30335}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B695353-EDE8-4697-A4F0-4E0B4BA7384F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B695353-EDE8-4697-A4F0-4E0B4BA7384F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B695353-EDE8-4697-A4F0-4E0B4BA7384F}.Nuget|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B695353-EDE8-4697-A4F0-4E0B4BA7384F}.Nuget|Any CPU.Build.0 = Debug|Any CPU
+		{0B695353-EDE8-4697-A4F0-4E0B4BA7384F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B695353-EDE8-4697-A4F0-4E0B4BA7384F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CABB6019-182D-4F69-834A-5CF7921C290F}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 EndGlobal

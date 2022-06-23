@@ -1,0 +1,40 @@
+﻿@namespace Mockaco.Gui.Web
+@using Layout = AntDesign.ProLayout.Layout
+@inherits LayoutComponentBase
+
+
+
+<AntDesign.ProLayout.BasicLayout 
+    Logo="@("mockaco-logo.svg")"
+    MenuData="MenuData"
+    Layout="Layout.Top">
+    <RightContentRender>
+        @* <AntDesign.Pro.Template.Components.RightContent /> *@
+    </RightContentRender>
+    <ChildContent>
+        @Body
+    </ChildContent>
+    <FooterRender>
+        <FooterView Copyright="@($"{DateTime.Now.Year} Mockaco")" Links="Links"></FooterView>
+    </FooterRender>
+</AntDesign.ProLayout.BasicLayout>
+<SettingDrawer />
+
+@code
+{
+    private MenuDataItem[] MenuData = new[]
+    {
+        new MenuDataItem { Path = "routes", Name = "Routes", Icon = "api"},
+        // new MenuDataItem { Path = "/", Name = "Logs", Icon = "file-text"},
+    };
+    public LinkItem[] Links { get; set; } =
+    {
+        new LinkItem
+        {
+            Key = "github",
+            Title = (RenderFragment)(@<Icon Type="github" />),
+            Href = "https://github.com/natenho/Mockaco",
+            BlankTarget = true,
+        }
+    };
+}

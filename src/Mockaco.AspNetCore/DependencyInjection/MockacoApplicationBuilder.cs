@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Mockaco;
+using Mockaco.Gui;
 using Mockaco.Verifyer;
 
 namespace Microsoft.AspNetCore.Builder
@@ -12,6 +13,7 @@ namespace Microsoft.AspNetCore.Builder
             app.UseRouting();
             var options = app.ApplicationServices.GetRequiredService<IOptions<MockacoOptions>>().Value;
             app.UseEndpoints(endpoints => endpoints.Map($"/{options.VerificationEndpointPrefix}/{options.VerificationEndpointName}", VerifyerExtensions.Verify));
+            app.UseGui();
 
             app.UseMiddleware<ErrorHandlingMiddleware>();
             configure(app);
