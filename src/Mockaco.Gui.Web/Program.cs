@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
+using Mockaco.Gui.Web.Components.Editor;
 
 namespace Mockaco.Gui.Web
 {
@@ -15,6 +16,7 @@ namespace Mockaco.Gui.Web
             builder.RootComponents.Add<App>("#app");
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            builder.Services.AddScoped<EditorInterop>();
             builder.Services.AddAntDesign();
             builder.Services.Configure<ProSettings>(builder.Configuration.GetSection("ProSettings"));
 

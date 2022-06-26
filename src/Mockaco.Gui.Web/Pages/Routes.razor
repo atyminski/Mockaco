@@ -1,7 +1,17 @@
-@page "/"
 @page "/routes"
-<h3>Routes</h3>
 
-@code {
-    
-}
+<Row>
+    <Col Span="6">
+        <AntList Bordered DataSource="@_routes" Size="small">
+            <ChildContent Context="item">
+                <ListItem Class="routes-list-item">
+                    @item.Route
+                    <HttpMethodBadge Method="@item.Method" />
+                </ListItem>
+            </ChildContent>
+        </AntList>
+    </Col>
+    <BorderedCol Span="16">
+        <Editor />
+    </BorderedCol>
+</Row>

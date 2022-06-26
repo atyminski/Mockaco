@@ -14,5 +14,22 @@
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="6.0.0" />
     <PackageReference Include="System.Net.Http.Json" Version="6.0.0" />
   </ItemGroup>
+	
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(ProjectDir)node_modules') ">
+	  <Exec Command="node --version" ContinueOnError="true">
+		  <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+	  </Exec>
+	  <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+	  <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+	  <Exec WorkingDirectory="$(ProjectDir)" Command="npm install" />
+  </Target>
+	
+  <Target Name="DevWebpackBuild" BeforeTargets="DebugEnsureNodeEnv" Condition=" '$(Configuration)' == 'Debug' And Exists('$(ProjectDir)node_modules') ">
+		<Exec Command="npm run build-dev" Condition="$(Configuration) == 'Debug'" />
+  </Target>
 
+  <Target Name="ProdWebpackBuild" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Release'">
+	  <Exec WorkingDirectory="$(ProjectDir)" Command="npm install" />
+	  <Exec WorkingDirectory="$(ProjectDir)" Command="npm run build-prod" />
+  </Target>
 </Project>

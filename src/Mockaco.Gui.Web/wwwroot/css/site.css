@@ -50,3 +50,13 @@ ol {
     min-height: 100vh;
   }
 }
+
+.bordered-box {
+    border: 1px solid #f0f0f0;
+    border-radius: 2px;
+}
+
+.page-content {
+    background-color: white;
+    margin: 0;
+}

@@ -2,20 +2,20 @@
 @using Layout = AntDesign.ProLayout.Layout
 @inherits LayoutComponentBase
 
-
-
 <AntDesign.ProLayout.BasicLayout 
-    Logo="@("mockaco-logo.svg")"
+    Logo="@("assets/logo.svg")"
     MenuData="MenuData"
     Layout="Layout.Top">
     <RightContentRender>
         @* <AntDesign.Pro.Template.Components.RightContent /> *@
     </RightContentRender>
     <ChildContent>
-        @Body
+        <div class="page-content">
+            @Body
+        </div>
     </ChildContent>
     <FooterRender>
-        <FooterView Copyright="@($"{DateTime.Now.Year} Mockaco")" Links="Links"></FooterView>
+        @* TODO *@
     </FooterRender>
 </AntDesign.ProLayout.BasicLayout>
 <SettingDrawer />
