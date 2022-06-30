@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mockaco.AspNetCore", "src\M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mockaco.Gui.Web", "src\Mockaco.Gui.Web\Mockaco.Gui.Web.csproj", "{0B695353-EDE8-4697-A4F0-4E0B4BA7384F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mockaco.ScriptCompletion.Sandbox", "Mockaco.ScriptCompletion.Sandbox\Mockaco.ScriptCompletion.Sandbox.csproj", "{32914888-0208-47A3-AAB9-AB94301E109C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,12 @@ Global
 		{0B695353-EDE8-4697-A4F0-4E0B4BA7384F}.Nuget|Any CPU.Build.0 = Debug|Any CPU
 		{0B695353-EDE8-4697-A4F0-4E0B4BA7384F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B695353-EDE8-4697-A4F0-4E0B4BA7384F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32914888-0208-47A3-AAB9-AB94301E109C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32914888-0208-47A3-AAB9-AB94301E109C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32914888-0208-47A3-AAB9-AB94301E109C}.Nuget|Any CPU.ActiveCfg = Debug|Any CPU
+		{32914888-0208-47A3-AAB9-AB94301E109C}.Nuget|Any CPU.Build.0 = Debug|Any CPU
+		{32914888-0208-47A3-AAB9-AB94301E109C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32914888-0208-47A3-AAB9-AB94301E109C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

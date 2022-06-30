@@ -52,7 +52,7 @@
 		<PackageReference Include="MAB.DotIgnore" Version="3.0.2" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.0" />
 		<PackageReference Include="Microsoft.OpenApi.Readers" Version="1.2.3" />
-		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="3.9.0" />
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="4.3.0-2.final" />
 		<PackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="3.3.3">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -71,6 +71,10 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\Mockaco.Gui.Web\Mockaco.Gui.Web.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Templating\Scripting\Utilities" />
 	</ItemGroup>
 
 </Project>
