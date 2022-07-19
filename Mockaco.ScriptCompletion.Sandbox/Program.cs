@@ -61,11 +61,11 @@ static async Task PrintCompletionResults(Document document, int position, Projec
     var syntaxRoot = await document.GetSyntaxRootAsync();
     var semanticModel = await document.GetSemanticModelAsync();
     var methods = syntaxRoot.DescendantNodes().OfType<InvocationExpressionSyntax>();
-    
     var allMethodRefs = new List<IEnumerable<ReferencedSymbol>>();
-
+    
     foreach (var i in results.Items)
     {
+        var desc = await completionService.GetDescriptionAsync(document, i);
         Console.WriteLine(i.DisplayText);
 
         foreach (var prop in i.Properties)
