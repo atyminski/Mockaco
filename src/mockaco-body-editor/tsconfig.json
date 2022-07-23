@@ -11,6 +11,6 @@
       "jsx": "preserve",
       "typeRoots": ["node_modules/@types"]
     },
-    "include": ["./Components/**/*", "./App.ts"],
+    "include": ["**/*", "src/index.ts"],
     "exclude": ["node_modules"]
   }
