@@ -18,9 +18,5 @@ namespace Mockaco.Common
         public InvalidMockException(string message, Exception innerException) : base(message, innerException)
         {
         }
-
-        protected InvalidMockException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
     }
 }
